@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Digital Kelompok 8 - One Page Platform</title>
+    <!-- Favicon: Replaces default browser globe icon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="alternate icon" href="images/logo-badge.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Floating Glassmorphism Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#beranda" class="logo">
+                <img src="images/logo.svg" alt="Logo Perpustakaan" class="navbar-logo">
+                <span>Perpustakaan<span class="logo-highlight">Digital</span></span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#beranda" class="active">Beranda</a>
+                <a href="#buku-terbaru">Buku Terbaru</a>
+                <a href="#daftar-buku">Daftar Buku</a>
+                <a href="#kategori-buku">Kategori Buku</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#tentang">Tentang Kami</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero / Beranda Section -->
+    <section id="beranda" class="hero">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+
+        <div style="position: relative; z-index: 2;">
+            <div class="hero-pill">
+                <i class="fa-solid fa-sparkles"></i> Perpustakaan Digital Kelompok 8
+            </div>
+            <h1>Jelajahi Pengetahuan <br>Tanpa Batas</h1>
+            <p>Selamat datang di platform perpustakaan digital modern. Akses ribuan buku, jurnal ilmiah, dan karya sastra pilihan untuk meningkatkan wawasan Anda.</p>
+            
+            <!-- Quick Search Bar in Hero -->
+            <div class="hero-search-box">
+                <i class="fa-solid fa-magnifying-glass hero-search-icon"></i>
+                <input type="text" id="hero-search-input" class="hero-search-input" placeholder="Cari judul buku, penulis, atau topik sains, IT, sejarah...">
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#daftar-buku" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Mulai Membaca</a>
+                <a href="#kategori-buku" class="btn btn-outline"><i class="fa-solid fa-layer-group"></i> Lihat Kategori</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Counter Bar -->
+    <div class="stats-container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-book-atlas"></i></div>
+                <div>
+                    <div class="stat-number" data-target="5000">5.000+</div>
+                    <div class="stat-label">Koleksi Buku</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                <div>
+                    <div class="stat-number" data-target="1200">1.200+</div>
+                    <div class="stat-label">Anggota Aktif</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-tags"></i></div>
+                <div>
+                    <div class="stat-number" data-target="50">50+</div>
+                    <div class="stat-label">Kategori Buku</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Akses Digital</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Buku Terbaru Section -->
+    <section id="buku-terbaru" class="container">
+        <div class="section-header">
+            <span class="section-badge">Rekomendasi Minggu Ini</span>
+            <h2 class="section-title">Koleksi Buku Terbaru</h2>
+            <p class="section-subtitle">Dapatkan rilis teranyar dari berbagai penulis ternama yang baru saja ditambahkan ke perpustakaan.</p>
+        </div>
+
+        <div class="grid grid-4">
+            <!-- Book 1 -->
+            <div class="book-card" data-title="Menjelajah Angkasa" data-author="John Doe" data-category="Sains & Teknologi">
+                <div class="book-badge-container">
+                    <span class="badge-new">Terbaru</span>
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Sains & Teknologi</span>
+                    <h3 class="book-title">Menjelajah Angkasa</h3>
+                    <p class="book-author">John Doe</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Menjelajah Angkasa">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-card" data-title="Dasar Pemrograman" data-author="Jane Smith" data-category="Komputer & IT">
+                <div class="book-badge-container">
+                    <span class="badge-new">Terbaru</span>
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Komputer & IT</span>
+                    <h3 class="book-title">Dasar Pemrograman</h3>
+                    <p class="book-author">Jane Smith</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Dasar Pemrograman">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card" data-title="Bumi Kita" data-author="Ahmad Reza" data-category="Sains & Teknologi">
+                <div class="book-badge-container">
+                    <span class="badge-new">Terbaru</span>
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.7</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Sains & Teknologi</span>
+                    <h3 class="book-title">Bumi Kita</h3>
+                    <p class="book-author">Ahmad Reza</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot borrowed"></span> Dipinjam</div>
+                        <button class="btn btn-outline btn-detail" style="padding: 0.45rem 1rem; font-size: 0.85rem; color: var(--secondary); border-color: var(--border);" data-book="Bumi Kita">Detail</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card" data-title="Berpikir Positif" data-author="Siti Aminah" data-category="Motivasi">
+                <div class="book-badge-container">
+                    <span class="badge-new">Terbaru</span>
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 5.0</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Motivasi</span>
+                    <h3 class="book-title">Berpikir Positif</h3>
+                    <p class="book-author">Siti Aminah</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Berpikir Positif">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 3. Daftar Semua Buku Section (With Live Filter) -->
+    <section id="daftar-buku" class="container">
+        <div class="section-header">
+            <span class="section-badge">Katalog Perpustakaan</span>
+            <h2 class="section-title">Daftar Semua Buku</h2>
+            <p class="section-subtitle">Temukan koleksi bacaan berkualitas tinggi berdasarkan genre dan topik favorit Anda.</p>
+        </div>
+
+        <!-- Filter Tab Buttons -->
+        <div class="filter-bar" id="category-filter-bar">
+            <button class="filter-btn active" data-filter="all">Semua Kategori</button>
+            <button class="filter-btn" data-filter="sains">Sains & Teknologi</button>
+            <button class="filter-btn" data-filter="komputer">Komputer & IT</button>
+            <button class="filter-btn" data-filter="fiksi">Fiksi & Sastra</button>
+            <button class="filter-btn" data-filter="sejarah">Sejarah</button>
+            <button class="filter-btn" data-filter="kuliner">Kuliner</button>
+            <button class="filter-btn" data-filter="kesehatan">Kesehatan</button>
+        </div>
+
+        <div class="grid grid-4" id="all-books-grid">
+            <!-- Book 1 -->
+            <div class="book-card" data-category="sains" data-title="Menjelajah Angkasa" data-author="John Doe">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Sains & Teknologi</span>
+                    <h3 class="book-title">Menjelajah Angkasa</h3>
+                    <p class="book-author">John Doe</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Menjelajah Angkasa">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-card" data-category="komputer" data-title="Dasar Pemrograman" data-author="Jane Smith">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Komputer & IT</span>
+                    <h3 class="book-title">Dasar Pemrograman</h3>
+                    <p class="book-author">Jane Smith</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Dasar Pemrograman">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card" data-category="sains" data-title="Bumi Kita" data-author="Ahmad Reza">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.7</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Sains & Teknologi</span>
+                    <h3 class="book-title">Bumi Kita</h3>
+                    <p class="book-author">Ahmad Reza</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot borrowed"></span> Dipinjam</div>
+                        <button class="btn btn-outline btn-detail" style="padding: 0.45rem 1rem; font-size: 0.85rem; color: var(--secondary); border-color: var(--border);" data-book="Bumi Kita">Detail</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card" data-category="motivasi" data-title="Berpikir Positif" data-author="Siti Aminah">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 5.0</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Motivasi</span>
+                    <h3 class="book-title">Berpikir Positif</h3>
+                    <p class="book-author">Siti Aminah</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Berpikir Positif">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book-card" data-category="sejarah" data-title="Sejarah Dunia" data-author="Robert Brown">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1461360370896-922624d12ebb?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Sejarah</span>
+                    <h3 class="book-title">Sejarah Dunia</h3>
+                    <p class="book-author">Robert Brown</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Sejarah Dunia">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="book-card" data-category="kuliner" data-title="Resep Nusantara" data-author="Chef Budi">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Kuliner</span>
+                    <h3 class="book-title">Resep Nusantara</h3>
+                    <p class="book-author">Chef Budi</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Resep Nusantara">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 7 -->
+            <div class="book-card" data-category="fiksi" data-title="Senja di Jakarta" data-author="Mochtar Lubis">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1474552226712-ac0f0961a954?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Fiksi Novel</span>
+                    <h3 class="book-title">Senja di Jakarta</h3>
+                    <p class="book-author">Mochtar Lubis</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Senja di Jakarta">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 8 -->
+            <div class="book-card" data-category="kesehatan" data-title="Hidup Sehat" data-author="Dr. Tirta">
+                <div class="book-badge-container">
+                    <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</span>
+                </div>
+                <div class="book-cover" style="background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=400&q=80');"></div>
+                <div class="book-info">
+                    <span class="book-category">Kesehatan</span>
+                    <h3 class="book-title">Hidup Sehat</h3>
+                    <p class="book-author">Dr. Tirta</p>
+                    <div class="book-action">
+                        <div class="stock-indicator"><span class="stock-dot available"></span> Tersedia</div>
+                        <button class="btn btn-primary btn-pinjam" style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-book="Hidup Sehat">Pinjam</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 4. Kategori Buku Section -->
+    <section id="kategori-buku" class="container">
+        <div class="section-header">
+            <span class="section-badge">Jelajahi Genre</span>
+            <h2 class="section-title">Kategori Utama</h2>
+            <p class="section-subtitle">Temukan buku yang sesuai dengan minat dan bidang studi Anda.</p>
+        </div>
+
+        <div class="grid grid-3">
+            <div class="category-card" onclick="filterCategoryFromCard('sains')">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=600&q=80" alt="Sains & Teknologi">
+                </div>
+                <div class="category-body">
+                    <div class="category-icon"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Sains & Teknologi</h3>
+                    <p>Jelajahi keajaiban ilmu pengetahuan, astrofisika, dan perkembangan teknologi terkini.</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="filterCategoryFromCard('komputer')">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Komputer & IT">
+                </div>
+                <div class="category-body">
+                    <div class="category-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Komputer & IT</h3>
+                    <p>Buku pemrograman, pengembangan web, jaringan, dan kecerdasan buatan.</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="filterCategoryFromCard('fiksi')">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=600&q=80" alt="Fiksi & Sastra">
+                </div>
+                <div class="category-body">
+                    <div class="category-icon"><i class="fa-solid fa-book"></i></div>
+                    <h3>Fiksi & Sastra</h3>
+                    <p>Novel, cerpen, karya sastra klasik, dan antologi fiksi dari karya dunia.</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="filterCategoryFromCard('sejarah')">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1461360370896-922624d12ebb?auto=format&fit=crop&w=600&q=80" alt="Sejarah">
+                </div>
+                <div class="category-body">
+                    <div class="category-icon"><i class="fa-solid fa-landmark"></i></div>
+                    <h3>Sejarah</h3>
+                    <p>Pelajari peradaban masa lalu untuk memahami dinamika dunia hari ini.</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="filterCategoryFromCard('kuliner')">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Kuliner & Seni">
+                </div>
+                <div class="category-body">
+                    <div class="category-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Kuliner & Seni</h3>
+                    <p>Kumpulan resep masakan nusantara, teknik memasak, dan kebudayaan seni.</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="filterCategoryFromCard('kesehatan')">
+                <div class="category-img">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80" alt="Kesehatan">
+                </div>
+                <div class="category-body">
+                    <div class="category-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Kesehatan & Nutrisi</h3>
+                    <p>Panduan pola hidup sehat, kebugaran fisik, dan wawasan nutrisi terkini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 5. Galeri Section -->
+    <section id="galeri" class="container">
+        <div class="section-header">
+            <span class="section-badge">Fasilitas Perpustakaan</span>
+            <h2 class="section-title">Galeri Perpustakaan</h2>
+            <p class="section-subtitle">Suasana ruang membaca dan berbagai fasilitas yang kami sediakan untuk kenyamanan Anda.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=1200&q=80', 'Ruang Baca Utama')">
+                <img src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=600&q=80" alt="Ruang Baca Utama">
+                <div class="gallery-overlay">
+                    <h3>Ruang Baca Utama</h3>
+                    <p>Nyaman dan tenang untuk fokus membaca</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80', 'Koleksi Lengkap')">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" alt="Koleksi Lengkap">
+                <div class="gallery-overlay">
+                    <h3>Koleksi Lengkap</h3>
+                    <p>Ribuan buku dari berbagai kategori</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80', 'Ruang Diskusi')">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=600&q=80" alt="Ruang Diskusi">
+                <div class="gallery-overlay">
+                    <h3>Ruang Diskusi</h3>
+                    <p>Fasilitas untuk diskusi kelompok</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80', 'Pojok Anak')">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80" alt="Pojok Anak">
+                <div class="gallery-overlay">
+                    <h3>Pojok Anak</h3>
+                    <p>Area membaca yang menyenangkan untuk anak-anak</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80', 'Akses Digital')">
+                <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=600&q=80" alt="Akses Digital">
+                <div class="gallery-overlay">
+                    <h3>Akses Digital</h3>
+                    <p>Fasilitas komputer untuk akses jurnal dan e-book</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=1200&q=80', 'Kegiatan Literasi')">
+                <img src="https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=600&q=80" alt="Event Perpustakaan">
+                <div class="gallery-overlay">
+                    <h3>Kegiatan Literasi</h3>
+                    <p>Berbagai acara dan bedah buku rutin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 6. Tentang Perpustakaan Section -->
+    <section id="tentang" class="container">
+        <div class="about-hero">
+            <span class="section-badge">Profil Kelompok 8</span>
+            <h2 class="section-title">Tentang Perpustakaan Kami</h2>
+            <p>Perpustakaan Kelompok 8 didirikan dengan misi untuk meningkatkan minat baca dan menyediakan akses terbuka ke ilmu pengetahuan bagi masyarakat umum dan pelajar.</p>
+            <p>Melalui platform perpustakaan berbasis web ini, kami berkomitmen menyajikan pengalaman penemuan buku yang modern, intuitif, dan nyaman digunakan di berbagai perangkat.</p>
+        </div>
+
+        <h3 class="section-title" style="margin-top: 3.5rem; font-size: 1.8rem; text-align: center;">Tim Pengembang - Kelompok 8</h3>
+        <div class="team-grid" style="margin-top: 2rem;">
+            <div class="team-member">
+                <div class="member-avatar">L</div>
+                <h4 class="member-name">LELITA ANDINI</h4>
+                <span class="member-role">Anggota Tim</span>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">M</div>
+                <h4 class="member-name">M. Fachri Praditya</h4>
+                <span class="member-role">Anggota Tim</span>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">R</div>
+                <h4 class="member-name">RAGUSTI FISAL PRATAMA</h4>
+                <span class="member-role">Anggota Tim</span>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">S</div>
+                <h4 class="member-name">SYSIL ALNESIA QODRI</h4>
+                <span class="member-role">Anggota Tim</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 7. Kontak Section -->
+    <section id="kontak" class="container">
+        <div class="section-header">
+            <span class="section-badge">Hubungi Kami</span>
+            <h2 class="section-title">Layanan Bantuan & Kontak</h2>
+            <p class="section-subtitle">Punya pertanyaan seputar keanggotaan atau peminjaman? Tim kami siap membantu Anda.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p>Silakan hubungi kami untuk pertanyaan seputar layanan perpustakaan, usulan koleksi buku baru, atau donasi buku.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <strong>Alamat</strong>
+                        <p>Jl. Pendidikan No. 8, Kota Pelajar</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <strong>Telepon / WhatsApp</strong>
+                        <p>+62 812-3456-7890</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <strong>Email Resmi</strong>
+                        <p>info@perpustakaankelompok8.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <strong>Jam Operasional</strong>
+                        <p>Senin - Jumat: 08.00 - 16.00 WIB<br>Sabtu: 09.00 - 13.00 WIB</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Kirim Pesan Langsung</h3>
+                <form id="contact-form-el">
+                    <div class="form-group">
+                        <label class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subjek</label>
+                        <input type="text" class="form-control" placeholder="Subjek pertanyaan Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Pesan</label>
+                        <textarea class="form-control" placeholder="Tuliskan pesan atau pertanyaan Anda..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Kirim Pesan <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Detail & Pinjam Buku -->
+    <div class="modal-backdrop" id="book-modal">
+        <div class="modal-card">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <div id="modal-book-img" style="width: 140px; height: 190px; border-radius: var(--radius); background-size: cover; background-position: center; flex-shrink: 0; box-shadow: var(--shadow);"></div>
+                <div style="flex: 1; min-width: 240px;">
+                    <span id="modal-book-cat" class="book-category">Sains & Teknologi</span>
+                    <h3 id="modal-book-title" style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; margin: 0.25rem 0; color: var(--secondary);">Judul Buku</h3>
+                    <p id="modal-book-author" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Penulis</p>
+                    <p id="modal-book-desc" style="font-size: 0.92rem; color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">Deskripsi singkat buku ini menyajikan wawasan mendalam dan menarik bagi para pembaca yang haus akan ilmu pengetahuan.</p>
+                    <button class="btn btn-primary" id="modal-confirm-btn" style="width: 100%; justify-content: center;"><i class="fa-solid fa-check"></i> Konfirmasi Peminjaman</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Lightbox Galeri -->
+    <div class="modal-backdrop" id="lightbox-modal">
+        <div class="modal-card" style="max-width: 800px; padding: 1.5rem; text-align: center;">
+            <button class="modal-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-img" src="" alt="" style="border-radius: var(--radius); width: 100%; max-height: 70vh; object-fit: contain; margin-bottom: 1rem;">
+            <h3 id="lightbox-title" style="font-family: 'Outfit', sans-serif; color: var(--secondary);">Title</h3>
+        </div>
+    </div>
+
+    <!-- Floating Back-to-Top Button -->
+    <button class="back-to-top" id="back-to-top-btn" aria-label="Kembali ke Atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#beranda" class="logo" style="margin-bottom: 1.25rem;">
+                    <img src="images/logo.svg" alt="Logo Perpustakaan" class="navbar-logo">
+                    <span>Perpustakaan<span class="logo-highlight">Digital</span></span>
+                </a>
+                <p>Meningkatkan literasi dan minat baca masyarakat melalui platform digital modern yang mudah diakses kapan pun dan di mana pun.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Menu Cepat</h4>
+                <ul class="footer-links">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#buku-terbaru">Buku Terbaru</a></li>
+                    <li><a href="#daftar-buku">Daftar Semua Buku</a></li>
+                    <li><a href="#kategori-buku">Kategori Buku</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Informasi & Bantuan</h4>
+                <ul class="footer-links">
+                    <li><a href="#galeri">Galeri Fasilitas</a></li>
+                    <li><a href="#tentang">Tentang Kelompok 8</a></li>
+                    <li><a href="#kontak">Hubungi Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Website Perpustakaan Digital - Dibuat oleh Kelompok 8 (Lelita, M. Fachri, Ragusti, Sysil)
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
